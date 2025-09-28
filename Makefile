@@ -19,7 +19,7 @@ think-chan: _dimensions $(SRC_DIR)/model.json $(DEST_ASSETS)
 
 _dimensions: $(ASSETS)
 	@echo "Computing sprite dimensions"
-	@./find_dims.sh $(ASSETS_DIR) | tee "$@"
+	@./find-dims.sh $(ASSETS_DIR) | tee "$@"
 
 $(DEST_ASSETS_DIR)/%.png: $(ASSETS_DIR)/%.png _dimensions
 	@echo "[magick] $<"
