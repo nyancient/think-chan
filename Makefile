@@ -1,3 +1,4 @@
+VERSION ?= 1.0
 SRC_DIR := src
 ASSETS_DIR := $(SRC_DIR)/assets
 DEST_DIR := think-chan
@@ -6,11 +7,17 @@ DEST_ASSETS_DIR := $(DEST_DIR)/assets
 ASSETS := $(shell find $(ASSETS_DIR) -name '*.png' | sort)
 DEST_ASSETS := $(patsubst $(ASSETS_DIR)/%.png,$(DEST_ASSETS_DIR)/%.png,$(ASSETS))
 
-.PHONY: all clean
+.PHONY: all check clean
 
-all: think-chan
+all: check think-chan-$(VERSION).tar.gz
+
+check: think-chan
 	@echo "[verify] $(DEST_DIR)"
 	@./verify-model.sh $(DEST_DIR)/model.json $(DEST_ASSETS_DIR)
+
+think-chan-$(VERSION).tar.gz: think-chan
+	@echo "[tar]    $@"
+	@tar -czf "$@" "$<"
 
 think-chan: _dimensions $(SRC_DIR)/model.json $(DEST_ASSETS)
 	@mkdir -p "$@"
@@ -29,5 +36,6 @@ $(DEST_ASSETS_DIR)/%.png: $(ASSETS_DIR)/%.png _dimensions
 	magick "$@" -background transparent -gravity center -extent "$${final_canvas_width}x$${final_canvas_height}" "$@"
 
 clean:
-	rm -f _dimensions
+	rm -f think-chan-$(VERSION).tar.gz
 	rm -rf think-chan
+	rm -f _dimensions
