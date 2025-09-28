@@ -1,7 +1,5 @@
 # Think-chan
-<div style="float: left; max-height: 100px; overflow: hidden;">
-<img style="height: 160px;" src="src/assets/suit/smug/0/0.png">
-</div>
+<img align="left" style="height: 160px;" src="src/assets/suit/smug/0/0.png">
 
 Think-chan is a ThinkPad-themed [LivePNG](https://pypi.org/project/livepng/) model.
 With dog ears and a tail. Because everyone knows a ThinkPad is your loyal companion until its last dying breath.
@@ -14,7 +12,7 @@ manual postprocessing to clean up the worst of the LLM mistakes.
 Think-chan was primarily created to be [NyarchAssistant](https://github.com/NyarchLinux/NyarchAssistant) waifu,
 but she can obviously be used for anything sprite-related.
 
-<img style="float: right; height: 200px;" src="src/assets/suit/enthusiastic/0/0.png">
+<img align="right" style="float: right; height: 200px;" src="src/assets/suit/enthusiastic/0/0.png">
 To chat with your ThinkPad:
 
 1. Install and launch NyarchAssistant
@@ -31,7 +29,7 @@ Since Think-chan is pure AI slop, generated using a combination of ChatGPT and G
 
 She probably falls under one of the following categories:
 
-<img style="float: right; height: 200px;" src="src/assets/suit/confused/1/0.png">
+<img align="right" style="float: right; height: 200px;" src="src/assets/suit/confused/1/0.png">
 
 1. Undistributable: it might be argued that Think-chan is derived work, based on the countless works stolen by OpenAI
     and Google to train their LLMs. If this turns out to be the case, _any_ distribution of Think-chan (including
