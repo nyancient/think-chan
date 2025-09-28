@@ -21,7 +21,11 @@ To chat with your ThinkPad:
 4. Restart NyarchAssistant, then go to `Settings -> Avatar -> Avatar model -> LivePNG`
     and set `LivePNG Model` to `think-chan`
 5. Configure your preferred LLM and TTS engine for Nyarch Assistant. Avatar expressions are tied to TTS so even if
-    you don't actually want to listen to your ThinkPad speaking you'll still need [a dummy TTS engine](dont-speak.py).
+    you don't actually want to listen to your ThinkPad speaking you'll still need [a dummy TTS engine](dont-speak.py). A dummy TTS won't get you speaking animations unfortunately.
+
+
+## Demo
+![Recorded interaction with Think-chan using Nyarch Assistant](demo.gif)
 
 
 ## Copyright
